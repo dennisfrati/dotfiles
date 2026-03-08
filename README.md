@@ -16,7 +16,7 @@ My personal (and very easy) dotfiles :)
 
 ## Dipendences 
 
-| Tool | Uso |
+| Tool | Usage |
 |------|-----|
 | `stow` | Dotfiles manager |
 | `jq` | Parsing JSON in .tmux/status.sh |
