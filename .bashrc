@@ -10,6 +10,11 @@ mkcd() {
 	mkdir -p "${1}" && cd "${1}"
 }
 
+# lazy load thefuck
+fuck() {
+    eval "$(thefuck --alias)" && fuck "$@"
+}
+
 # System update function
 upgrade() {
 	if command -v pacman &>/dev/null; then
@@ -173,7 +178,7 @@ HISTTIMEFORMAT='%d/%m/%Y %T '
 
 #========== run-programs ===========
 
-# bash-completion per completare comandi ecc...
+# bash-completion
 if [[ -f /usr/share/bash-completion/bash_completion ]]; then
 	. /usr/share/bash-completion/bash_completion
 fi
@@ -197,7 +202,7 @@ if [[ -r /usr/share/fzf/completion.bash ]]; then
 fi
 
 # tmux launcher
-# Send login notification via Telegram
+# Send login notification via Telegram and email via msmtp
 # Note: telegram_send_msg.sh is a personal script - see my telegram-scripts repo
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
@@ -222,8 +227,3 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 		fi
 fi
 
-
-# lazy load thefuck (evita rallentamento avvio shell)
-fuck() {
-    eval "$(thefuck --alias)" && fuck "$@"
-}
