@@ -34,7 +34,7 @@ hi User7 ctermbg=red ctermfg=white cterm=bold
 hi User6 ctermbg=black ctermfg=white
 
 hi Normal       ctermbg=NONE ctermfg=15
-hi LineNr       ctermbg=0   ctermfg=240
+hi LineNr       ctermbg=NONE ctermfg=240
 hi CursorLine   ctermbg=236 cterm=NONE
 hi CursorLineNr ctermbg=236 ctermfg=3
 
@@ -74,7 +74,7 @@ hi DiffText     ctermbg=3   ctermfg=0
 hi VertSplit    ctermbg=236 ctermfg=240
 
 set updatetime=300
-set signcolumn=yes
+set signcolumn=auto
 set ignorecase
 set showmatch
 set hlsearch
@@ -86,10 +86,8 @@ set statusline=
 set statusline+=%9*
 set statusline+=%{StatusLineGit()}
 set statusline+=%7*
-set statusline+=\
-set statusline+=%{StslineMode()}
-set statusline+=\
-set statusline+=%6*
+set statusline+=\ %{StslineMode()}
+set statusline+=\ %6*
 set statusline+=\ %F
 set statusline+=\ %r
 set statusline+=\%m
@@ -100,7 +98,7 @@ set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\ [%{&fileformat}]
 set statusline+=\ %p%%
 set statusline+=\ %l:%c
-set statusline+=\
+set statusline+=\ 
 
 if filereadable($HOME . '/.vim/startscreen.vim')
     source $HOME/.vim/startscreen.vim
