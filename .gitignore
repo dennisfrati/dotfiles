@@ -1,0 +1,17 @@
+# local files
+*.local
+*.private
+*_local
+*_private
+
+# backup files
+*.bak
+*.swp
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# env
+.env
