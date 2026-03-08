@@ -2,7 +2,7 @@
 
 My personal (and very easy) dotfiles :)
 
-## Contenuti
+## Contents 
 
 - **.bashrc** - Bash config
 - **.bash_profile** - Bash profile
@@ -14,7 +14,7 @@ My personal (and very easy) dotfiles :)
 - **.fzf/env.sh** - fzf/fd/ripgrep config and helper functions
 - **.gitconfig** - Git config
 
-## Dipendenze
+## Dipendences 
 
 | Tool | Uso |
 |------|-----|
