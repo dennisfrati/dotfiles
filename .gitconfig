@@ -1,3 +1,6 @@
+[user]
+        name = Dennis Frati
+        email = dennis.frati@gmail.com
 [core]
 	editor = vim
 [alias]
