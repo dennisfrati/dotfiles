@@ -3,7 +3,7 @@
 #
 
 clear
-history -c && history -w
+#history -c && history -w
 
 DATE=$(date '+%T %F' | tr -d '\n')
 TTY=$(tty)
